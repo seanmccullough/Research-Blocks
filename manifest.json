@@ -14,7 +14,7 @@
   },
   
   "background": {
-    "scripts": ["test.js"]
+    "scripts": ["parse-1.2.12.min.js", "test.js"]
   },
   
   "browser_action": {
