@@ -12,6 +12,48 @@ text-align:center;
 </style>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    Parse.FacebookUtils.init({
+      appId      : '163584000501929',                        // App ID from the app dashboard
+      channelUrl : 'http://researchblocks.parseapp.com/channel.html', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+	  cookie	 : true,								//enable cookies to allow Parse to access session
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+   
+   
+   function logIn()
+   {
+	Parse.FacebookUtils.logIn(null, {
+	success: function(user) {
+    if (!user.existed()) {
+      alert("User signed up and logged in through Facebook!");
+    } else {
+      alert("User logged in through Facebook!");
+    }
+   },
+	error: function(user, error) {
+		alert("User cancelled the Facebook login or did not fully authorize.");
+	}
+	});
+   }
+   
+</script>
 
 <!-- This is a comment  -->
 
@@ -25,12 +67,12 @@ text-align:center;
 
 <ol class = 'text' style="list-style-type: none;">
 
-	<li> He is awesome. </li>
-	<li> He rocks! </li>
-	<li> He can beat you in FIFA. <h1>:p </h1></li>
+	<li> He sucks. </li>
+	<li> He papers! </li>
+	<li> He cannot ever beat you in FIFA. <h1>:p </h1></li>
 	
 </ol>
 
-<button class = 'text' type="button"><a href = "http://www.wikipedia.org"> Click here to go to Wikipedia!! </a></button>
+<button class = 'text' type="button" onclick = >Click here to go to Wikipedia!! </button>
 </body>
 </html>
