@@ -1,5 +1,4 @@
 
-
 <html>
 <head>
 <title>Pranav's Website</title>
@@ -10,17 +9,19 @@ p, li, h1 {color: black}
 text-align:center;
 }
 </style>
+<script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
 </head>
 <body>
 <div id="fb-root"></div>
 <script>
+Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08f0Cz396TzeqaQk4OVB7Jo2");
   window.fbAsyncInit = function() {
     // init the FB JS SDK
     Parse.FacebookUtils.init({
       appId      : '163584000501929',                        // App ID from the app dashboard
       channelUrl : 'http://researchblocks.parseapp.com/channel.html', // Channel file for x-domain comms
-      status     : true,                                 // Check Facebook Login status
-	  cookie	 : true,								//enable cookies to allow Parse to access session
+      //status     : true,                                 // Check Facebook Login status
+	  cookies	 : true,								//Allow cookies so Parse can access our session
       xfbml      : true                                  // Look for social plugins on the page
     });
 
@@ -32,27 +33,25 @@ text-align:center;
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/all.js";
+     js.src = "http://connect.facebook.net/en_US/all.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-   
    
    function logIn()
    {
 	Parse.FacebookUtils.logIn(null, {
-	success: function(user) {
-    if (!user.existed()) {
-      alert("User signed up and logged in through Facebook!");
-    } else {
-      alert("User logged in through Facebook!");
-    }
-   },
-	error: function(user, error) {
-		alert("User cancelled the Facebook login or did not fully authorize.");
-	}
+		success: function(user) {
+			if (!user.existed()) {
+			alert("User signed up and logged in through Facebook!");
+			} else {
+			alert("User logged in through Facebook!");
+			}
+		},
+		error: function(user, error) {
+			alert("User cancelled the Facebook login or did not fully authorize.");
+		}
 	});
-   }
-   
+   } 
 </script>
 
 <!-- This is a comment  -->
@@ -67,12 +66,14 @@ text-align:center;
 
 <ol class = 'text' style="list-style-type: none;">
 
-	<li> He sucks. </li>
-	<li> He papers! </li>
-	<li> He cannot ever beat you in FIFA. <h1>:p </h1></li>
+	<li> He is awesome. </li>
+	<li> He rocks! </li>
+	<li> He can beat you in FIFA. <h1>:p </h1></li>
 	
 </ol>
 
-<button class = 'text' type="button" onclick = "logIn()">Click here to go to Wikipedia!! </button>
+<button class = 'text' type="button", onclick = "logIn()">Send a message</button>
+
+
 </body>
 </html>
