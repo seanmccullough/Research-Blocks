@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE HTML> -->
 
 <html>
 <head>
@@ -42,6 +42,7 @@ z-index:1000;
 <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
 <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+<script src="MyBlocks.js"></script>
 
 </head>
 <body>
@@ -53,16 +54,33 @@ z-index:1000;
 <h1 class='text', style ="text-align:center">Your Blocks</h1>
 <br/><hr/>
 
-<div id = "table" >
-<table class="example2" width = "50%">
-<tr>
-<th>Block</th><th>Description</th>
-</tr>
-<tr>
-<td>Table cell 1</td><td>Table cell 2</td>
-</tr>
-</table>
-</div>
+<script>
+function doThing(){
+	
+	if(!Parse.User.current())
+		Parse.User.logIn("Sean", "me", {
+			success: function(user){
+			alert("Signed in successfully.");
+			//load up splash page
+			createTable();
+			},
+			error: function(user, error){
+			alert("Error: "+ error.code + " "+ error.message);
+			return;
+			}
+		});
+	}
+}
+
+function logout()
+{
+	Parse.User.logOut();
+}
+</script>
+<button id="loginButton" onclick="doThing()">LOGIN</button>
+<button onclick="logout()">LOGOUT</button>
+
+<p id = "blockTable"></p> <!-- The table will be dynamically generated here -->
 
 
 <!--div align="center">

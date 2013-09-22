@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 <title>Pranav's Website</title>
@@ -33,6 +33,11 @@ form.form-horizontal{
 <script src="signIn.js"></script>
 </head>
 <body>
+<script>
+Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08f0Cz396TzeqaQk4OVB7Jo2");
+if(Parse.User.current())
+	Parse.User.logOut();
+</script>
 
 <div id="fb-root"></div>
 
@@ -52,7 +57,7 @@ form.form-horizontal{
 
 <!-- Sign In Form -->
 
-<form class="form-horizontal">
+<form class="form-horizontal" onkeypress="event.keyCode == 13 ? signUp() :;">
   <div class="control-group">
     <label class="control-label" for="inputEmail">Email</label>
     <div class="controls">
@@ -76,7 +81,7 @@ form.form-horizontal{
       </label>
 	  <br/>
 	  <br/>
-      <button type="submit" class="btn" onclick="logIn()">Sign in</button>
+      <button class="btn" onclick="logIn() return false;">Sign in</button>
     </div>
   </div>
 </form>

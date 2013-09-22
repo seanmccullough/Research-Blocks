@@ -24,6 +24,7 @@ function logIn()
 	});
 	
 	}
+	return false;
 }
 
 function openSignUp()
