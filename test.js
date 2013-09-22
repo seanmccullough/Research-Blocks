@@ -34,24 +34,6 @@ function testOnClick(info)
 		console.log("This is a page\n\n");
 }
 
-// link selected
-/*function testOnClick_link(info)
-{
-	console.log(info.menuItemId + " was clicked, " + "link");
-	console.log("page URL is :  " + info.pageUrl);
-	console.log("link URL is :  " + info.linkUrl);
-	console.log("text is :  " + info.selectionText);
-}
-
-// selection selected
-function testOnClick_selection(info)
-{
-	console.log(info.menuItemId + " was clicked, " + "selection");
-	console.log("page URL is :  " + info.pageUrl);
-	console.log("link URL is :  " + info.linkUrl);
-	console.log("text is :  " + info.selectionText);
-}*/
-
 function inputBlockDetails()
 {
 	prompt("Block Name: ");
@@ -62,6 +44,7 @@ function createBlockWindow()
 	cbWindow = window.open("https://login.yahoo.com/config/login_verify2?&.src=ym&.intl=us");
 	cb.focus();
 }
+
 
 // "Create New Block" menu item
 
@@ -75,8 +58,8 @@ var fillBlock = chrome.contextMenus.create({"title": "Add to Block", "contexts":
 
 // Adding test blocks
 
-var testBlock1 = chrome.contextMenus.create(
-  {"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block1_page"});
+//var testBlock1 = chrome.contextMenus.create(
+  //{"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block1_page"});
  
 /*var testBlock1_link = chrome.contextMenus.create(
   {"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick_link, "contexts":["link", "image"], "id": "Block1_link"});
@@ -86,8 +69,8 @@ var testBlock1_selection = chrome.contextMenus.create(
 */
 
 
-var testBlock2 = chrome.contextMenus.create(
-  {"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block2_page"});
+//var testBlock2 = chrome.contextMenus.create(
+  //{"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block2_page"});
 
 /*var testBlock2_link = chrome.contextMenus.create(
   {"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick_link, "contexts":["link", "image"], "id": "Block2_link"});

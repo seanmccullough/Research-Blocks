@@ -1,5 +1,5 @@
 
-<!DOCTYPE HTML>
+
 <html>
 <head>
 <title>Create Account - RB</title>
@@ -14,6 +14,7 @@ form.form-horizontal{
     margin-left: 45%;
     margin-right:45%;
     width: 100%;
+
     }
 
 	p.text{
@@ -31,10 +32,12 @@ form.form-horizontal{
 <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
 <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
-<script src="signUp.js"></script>
+<script src="createBlock.js"></script>
 
 </head>
 <body>
+
+<div id="fb-root"></div>
 
 <!-- This is a comment  -->
 
@@ -42,25 +45,29 @@ form.form-horizontal{
 <br/>
 
 
+<!--div align="center">
+ <img src="xyz.jpg" alt ="Cool photo" width="185" height="142" class="displayed">
+</div-->
+
 <br/><br/>
 
-<p class = 'text' style = "font-size: 20px; text-align:center";>Create Account</p>
+<p class = 'text' style = "font-size: 20px; text-align:center";>Create a new block</p>
 
 <!-- Sign In Form -->
 
-<form class="form-horizontal" onkeypress="event.keyCode == 13 ? signUp() :;">
+<form class="form-horizontal">
   <div class="control-group">
-    <label class="control-label" for="inputEmail">Email</label>
+    <label class="control-label" for="inputEmail">Name</label>
     <div class="controls">
-      <input type="text" id="inputEmail" placeholder="Email">
+      <input type="text" id="inputName">
     </div>
   </div>
   <br/>
   
   <div class="control-group">
-    <label class="control-label" for="inputPassword">Password</label>
+    <label class="control-label" for="inputPassword">Description</label>
     <div class="controls">
-      <input type="password" id="inputPassword" placeholder="Password">
+      <input type="text" id="inputDescription">
     </div>
   </div>
   <br/>
@@ -69,10 +76,13 @@ form.form-horizontal{
     <div class="controls">
 	  <br/>
 	  <br/>
-      <button class="btn" onclick="signUp(); return false;">Sign up!</button>
+      <button type="submit" class="btn" onclick="createBlock()">Create</button>
     </div>
   </div>
 </form>
+
+<!--button class = 'text' type="button", onclick = >Send a message</button-->
+
 
 </body>
 </html>

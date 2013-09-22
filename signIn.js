@@ -1,7 +1,15 @@
-Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08f0Cz396TzeqaQk4OVB7Jo2");
+
 
 function logIn()
 {	
+	Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08f0Cz396TzeqaQk4OVB7Jo2");
+	alert("in login()");
+	var currentUser = Parse.User.current();
+	if (currentUser) {
+		alert("already logged");
+	} 
+	else {
+	alert("not logged");
 	var email = document.getElementById("inputEmail").value;
 	var password = document.getElementById("inputPassword").value;
 	
@@ -14,6 +22,9 @@ function logIn()
 		alert("Error: "+ error.code + " "+ error.message);
 		}
 	});
+	
+	}
+	return false;
 }
 
 function openSignUp()

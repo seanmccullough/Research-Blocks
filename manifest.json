@@ -16,7 +16,7 @@
   },
   
   "background": {
-    "scripts": ["parse-1.2.12.min.js", "test.js"]
+    "scripts": ["parse-1.2.12.min.js", "test.js", "createBlock.js"]
   },
   
   "browser_action": {
