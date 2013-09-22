@@ -9,9 +9,9 @@ function logIn()
 		alert("already logged");
 	} 
 	else {
-	
+	alert("not logged");
 	var email = document.getElementById("inputEmail").value;
-	var pass = document.getElementById("inputPassword").value;
+	var password = document.getElementById("inputPassword").value;
 	
 	Parse.User.logIn(email, password, {
 		success: function(user){

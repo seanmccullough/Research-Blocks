@@ -34,24 +34,6 @@ function testOnClick(info)
 		console.log("This is a page\n\n");
 }
 
-// link selected
-/*function testOnClick_link(info)
-{
-	console.log(info.menuItemId + " was clicked, " + "link");
-	console.log("page URL is :  " + info.pageUrl);
-	console.log("link URL is :  " + info.linkUrl);
-	console.log("text is :  " + info.selectionText);
-}
-
-// selection selected
-function testOnClick_selection(info)
-{
-	console.log(info.menuItemId + " was clicked, " + "selection");
-	console.log("page URL is :  " + info.pageUrl);
-	console.log("link URL is :  " + info.linkUrl);
-	console.log("text is :  " + info.selectionText);
-}*/
-
 function inputBlockDetails()
 {
 	prompt("Block Name: ");
@@ -62,6 +44,7 @@ function createBlockWindow()
 	cbWindow = window.open("https://login.yahoo.com/config/login_verify2?&.src=ym&.intl=us");
 	cb.focus();
 }
+
 
 // "Create New Block" menu item
 
