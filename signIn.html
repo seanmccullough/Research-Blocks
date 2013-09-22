@@ -32,19 +32,16 @@ form.form-horizontal{
 <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
 <script src="signIn.js"></script>
 </head>
-<body>
+<body onload="setUserName()">
 
 <!-- This is a comment  -->
 
 <h1 class='text', style ="text-align:center">Welcome To Research Blocks</h1>
 <br/>
 
+<p class='text', style = "font-size: 20px; text-align:right" id="loginStatus";> </p>
+<a class='text', style="margin-left:95%" href="#" onclick = "logOut()"> Logout </a>
 
-<!--div align="center">
- <img src="xyz.jpg" alt ="Cool photo" width="185" height="142" class="displayed">
-</div-->
-
-<br/>
 <br/>
 
 <p class = 'text' style = "font-size: 20px; text-align:center";>Sign In</p>
@@ -82,7 +79,7 @@ form.form-horizontal{
 
 <br/><hr/>
 <p class = "text"> New User? </p>
-<a class = "text"  href="#" onclick = "openSignUp()" style="margin-left:47.5%"> Sign up now </p>
+<a class = "text"  href="#" onclick = "openSignUp()" style="margin-left:47.5%"> Sign up now </a> 
 
 </body>
 </html>
