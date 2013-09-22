@@ -55,9 +55,9 @@ form.form-horizontal{
 
 <!-- Sign In Form -->
 
-<form class="form-horizontal">
+<form class="form-horizontal" ,onkeypress="event.keyCode == 13 ? logIn() : ;">
   <div class="control-group">
-    <label class="control-label" for="inputEmail">Name</label>
+    <label class="control-label" for="inputnAME">Name</label>
     <div class="controls">
       <input type="text" id="inputName">
     </div>
@@ -65,7 +65,7 @@ form.form-horizontal{
   <br/>
   
   <div class="control-group">
-    <label class="control-label" for="inputPassword">Description</label>
+    <label class="control-label" for="inputDescription">Description</label>
     <div class="controls">
       <input type="text" id="inputDescription">
     </div>
@@ -76,7 +76,7 @@ form.form-horizontal{
     <div class="controls">
 	  <br/>
 	  <br/>
-      <button type="submit" class="btn" onclick="createBlock()">Create</button>
+      <button type="submit" class="btn" onclick="createBlock(); return false;">Create</button>
     </div>
   </div>
 </form>
