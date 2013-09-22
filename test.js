@@ -75,8 +75,8 @@ var fillBlock = chrome.contextMenus.create({"title": "Add to Block", "contexts":
 
 // Adding test blocks
 
-var testBlock1 = chrome.contextMenus.create(
-  {"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block1_page"});
+//var testBlock1 = chrome.contextMenus.create(
+  //{"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block1_page"});
  
 /*var testBlock1_link = chrome.contextMenus.create(
   {"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick_link, "contexts":["link", "image"], "id": "Block1_link"});
@@ -86,8 +86,8 @@ var testBlock1_selection = chrome.contextMenus.create(
 */
 
 
-var testBlock2 = chrome.contextMenus.create(
-  {"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block2_page"});
+//var testBlock2 = chrome.contextMenus.create(
+  //{"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block2_page"});
 
 /*var testBlock2_link = chrome.contextMenus.create(
   {"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick_link, "contexts":["link", "image"], "id": "Block2_link"});
