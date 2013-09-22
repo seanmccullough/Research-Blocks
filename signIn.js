@@ -3,7 +3,7 @@ Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08
 function logIn()
 {	
 	var email = document.getElementById("inputEmail").value;
-	var pass = document.getElementById("inputPassword").value;
+	var password = document.getElementById("inputPassword").value;
 	
 	Parse.User.logIn(email, password, {
 		success: function(user){
@@ -14,7 +14,6 @@ function logIn()
 		alert("Error: "+ error.code + " "+ error.message);
 		}
 	});
-	return false;
 }
 
 function openSignUp()

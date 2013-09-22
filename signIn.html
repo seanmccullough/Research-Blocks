@@ -39,7 +39,7 @@ if(Parse.User.current())
 	Parse.User.logOut();
 </script>
 
-<div id="fb-root"></div>
+<!-- <div id="fb-root"></div> -->
 
 <!-- This is a comment  -->
 
@@ -57,7 +57,7 @@ if(Parse.User.current())
 
 <!-- Sign In Form -->
 
-<form class="form-horizontal" onkeypress="event.keyCode == 13 ? signUp() :;">
+<form class="form-horizontal" onkeypress="event.keyCode == 13 ? logIn() :;">
   <div class="control-group">
     <label class="control-label" for="inputEmail">Email</label>
     <div class="controls">
@@ -81,7 +81,7 @@ if(Parse.User.current())
       </label>
 	  <br/>
 	  <br/>
-      <button class="btn" onclick="logIn() return false;">Sign in</button>
+      <button class="btn" onclick="logIn(); return false;">Sign in</button>
     </div>
   </div>
 </form>
