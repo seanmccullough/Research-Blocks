@@ -22,15 +22,13 @@ function logIn()
 	Parse.User.logIn(email, password, {
 		success: function(user){
 		alert("Signed in successfully.");
+		setUserName();
 		//load up splash page
 		},
 		error: function(user, error){
 		alert("Error: "+ error.code + " "+ error.message);
 		}
 	});
-	
-	setUserName();
-	
 	return false;
 }
 
