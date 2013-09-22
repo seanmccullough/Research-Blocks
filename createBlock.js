@@ -6,7 +6,7 @@ function createBlock()
 	Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08f0Cz396TzeqaQk4OVB7Jo2");
 	var Block = new Parse.Object.extend("Blocks");
 	var block = new Block(); 
-	
+	alert("created block");
 	var name = document.getElementById("inputName").value;
 	var description = document.getElementById("inputDescription").value;
 	var owner = Parse.User.current().getUsername();
