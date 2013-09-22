@@ -31,17 +31,17 @@ form.form-horizontal{
 
 <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
 <script src="signIn.js"></script>
+<script>
+	if(Parse.User.current())
+		window.open("http://researchblocks.parseapp.com/MyBlocks.html","_self");
+</script>
 </head>
-<body onload="setUserName()">
+<body>
 
 <!-- This is a comment  -->
 
 <h1 class='text', style ="text-align:center">Welcome To Research Blocks</h1>
 <br/>
-
-<p class='text', style = "font-size: 20px; text-align:right" id="loginStatus";> </p>
-<a class='text', style="margin-left:95%" href="#" onclick = "logOut()"> Logout </a>
-
 <br/>
 
 <p class = 'text' style = "font-size: 20px; text-align:center";>Sign In</p>

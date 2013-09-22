@@ -45,40 +45,14 @@ z-index:1000;
 <script src="MyBlocks.js"></script>
 
 </head>
-<body>
-
-<div id="fb-root"></div>
-
-<!-- This is a comment  -->
+<body onload="setUserName(); createTable();">
 
 <h1 class='text', style ="text-align:center">Your Blocks</h1>
 <br/><hr/>
 
-<script>
-function doThing(){
-	
-	if(!Parse.User.current())
-		Parse.User.logIn("Sean", "me", {
-			success: function(user){
-			alert("Signed in successfully.");
-			//load up splash page
-			createTable();
-			},
-			error: function(user, error){
-			alert("Error: "+ error.code + " "+ error.message);
-			return;
-			}
-		});
-	}
-}
+<p class='text', style = "font-size: 20px; text-align:right" id="loginStatus";> </p>
+<a class='text', style="margin-left:95%" href="#" onclick = "logOut()"> Logout </a>
 
-function logout()
-{
-	Parse.User.logOut();
-}
-</script>
-<button id="loginButton" onclick="doThing()">LOGIN</button>
-<button onclick="logout()">LOGOUT</button>
 
 <p id = "blockTable"></p> <!-- The table will be dynamically generated here -->
 
