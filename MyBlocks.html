@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE HTML> -->
 
 <html>
 <head>
@@ -42,10 +42,10 @@ z-index:1000;
 <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
 <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
-<script src="http://researchblocks.parseapp.MyBlocks.html"></script>
+<script src="MyBlocks.js"></script>
 
 </head>
-<body onload="createTable()">
+<body>
 
 <div id="fb-root"></div>
 
@@ -54,7 +54,33 @@ z-index:1000;
 <h1 class='text', style ="text-align:center">Your Blocks</h1>
 <br/><hr/>
 
-<p id = "table"></p> <!-- The table will be dynamically generated here -->
+<script>
+function doThing(){
+	
+	if(!Parse.User.current())
+		Parse.User.logIn("Sean", "me", {
+			success: function(user){
+			alert("Signed in successfully.");
+			//load up splash page
+			createTable();
+			},
+			error: function(user, error){
+			alert("Error: "+ error.code + " "+ error.message);
+			return;
+			}
+		});
+	}
+}
+
+function logout()
+{
+	Parse.User.logOut();
+}
+</script>
+<button id="loginButton" onclick="doThing()">LOGIN</button>
+<button onclick="logout()">LOGOUT</button>
+
+<p id = "blockTable"></p> <!-- The table will be dynamically generated here -->
 
 
 <!--div align="center">

@@ -14,6 +14,7 @@ function logIn()
 		alert("Error: "+ error.code + " "+ error.message);
 		}
 	});
+	return false;
 }
 
 function openSignUp()
