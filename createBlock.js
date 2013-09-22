@@ -1,15 +1,31 @@
+Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08f0Cz396TzeqaQk4OVB7Jo2");
 
+function setUserName()
+{
+	var name;
+	var currentUser = Parse.User.current();
+	if(currentUser)
+		name = currentUser.get("username");
+	else
+		name = "No one is signed in.";
+	document.getElementById("loginStatus").innerHTML = name;
+}
+
+function createBlockWindow()
+{
+	cbWindow = window.open("http://researchblocks.parseapp.com/createBlock.html");
+	cbWindow.focus();
+}
 
 function createBlock()
 {	
 	alert("going to create block");
-	Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08f0Cz396TzeqaQk4OVB7Jo2");
-	var Block = new Parse.Object.extend("Blocks");
-	var block = new Block(); 
+	var Blocks = Parse.Object.extend("Blocks");
+	var block = new Blocks(); 
 	alert("created block");
 	var name = document.getElementById("inputName").value;
 	var description = document.getElementById("inputDescription").value;
-	var owner = Parse.User.current().getUsername();
+	var owner = Parse.User.current().get("username");
 	alert("Owner = " + owner);
 	
 	block.set("name",name);

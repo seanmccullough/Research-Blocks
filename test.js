@@ -39,13 +39,6 @@ function inputBlockDetails()
 	prompt("Block Name: ");
 }
 
-function createBlockWindow()
-{
-	cbWindow = window.open("http://researchblocks.parseapp.com/createBlock.html");
-	cbWindow.focus();
-}
-
-
 // "Create New Block" menu item
 
 var createBlock = chrome.contextMenus.create({"title": "Create New Block","onclick": createBlockWindow,"contexts":["all"],
