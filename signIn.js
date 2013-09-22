@@ -7,7 +7,7 @@ function logIn()
 	
 	Parse.User.logIn(email, password, {
 		success: function(user){
-		window.open("http://reasearchblocks.parseapp.com/MyBlocks.html","_self");
+		window.open("MyBlocks.html","_self");
 		},
 		error: function(user, error){
 		alert("Error: "+ error.code + " "+ error.message);

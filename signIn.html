@@ -30,18 +30,23 @@ form.form-horizontal{
 <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
 <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+<script src="utilities.js"></script>
 <script src="signIn.js"></script>
 <script>
 	if(Parse.User.current())
-		window.open("http://researchblocks.parseapp.com/MyBlocks.html","_self");
-</script>
+	{
+		Parse.User.logOut(); 
+	}
+</script> 
 </head>
-<body>
+<body onload="setUserName()">
 
 <!-- This is a comment  -->
 
 <h1 class='text', style ="text-align:center">Welcome To Research Blocks</h1>
 <br/>
+<p class='text', style = "font-size: 20px; text-align:right" id="loginStatus";> </p>
+<a class='text', style="margin-left:95%" href="#" onclick = "logOut()"> Logout </a>
 <br/>
 
 <p class = 'text' style = "font-size: 20px; text-align:center";>Sign In</p>
