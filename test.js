@@ -41,8 +41,8 @@ function inputBlockDetails()
 
 function createBlockWindow()
 {
-	cbWindow = window.open("https://login.yahoo.com/config/login_verify2?&.src=ym&.intl=us");
-	cb.focus();
+	cbWindow = window.open("http://researchblocks.parseapp.com/createBlock.html");
+	cbWindow.focus();
 }
 
 

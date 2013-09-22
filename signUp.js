@@ -20,8 +20,8 @@ function signUp()
 	user.signUp(null,{
 		success: function(user){
 		alert("Account created.\n"
-			 +"Name: " + user.username+"\n"
-			 +"Password: "+ user.password+"\n");
+			 +"Name: " + user.getUsername()+"\n"
+			 +"Password: "+ user.getPassword()+"\n");
 		//load up splash page
 		},
 		error: function(user, error){ 
