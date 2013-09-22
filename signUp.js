@@ -12,9 +12,9 @@ function signUp()
 	user.signUp(null,{
 		success: function(user){
 		alert("Account created.\n"
-			 +"Name: " + user.get("username")+"\n"
-			 +"Password: "+ user.get("password")+"\n");
+			 +"Name: " + user.get("username")+"\n");
 		//load up splash page
+		window.open("MyBlocks.html", "_self")
 		},
 		error: function(user, error){ 
 			alert("Error: " + error.code + " " + error.message);

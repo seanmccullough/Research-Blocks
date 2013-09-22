@@ -18,5 +18,5 @@ function logIn()
 
 function openSignUp()
 {
-	window.open("http://researchblocks.parseapp.com/signUp.html", "_self");
+	window.open("signUp.html", "_self");
 }

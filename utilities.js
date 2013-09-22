@@ -19,5 +19,5 @@ function logOut()
 	if(Parse.User.current())
 		Parse.User.logOut();
 	setUserName();
-	//window.open("//signIn.html","_self");
+	window.open("signIn.html","_self");
 }
