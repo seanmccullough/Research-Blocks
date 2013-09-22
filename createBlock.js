@@ -2,6 +2,7 @@ Parse.initialize("YvULQpWeWms3tGPYJYeFR37L1YhZus8T7v2joSvz", "X6uoBy1zoOanP51e08
 
 function setUserName()
 {
+	alert("Setting username");
 	var name;
 	var currentUser = Parse.User.current();
 	if(currentUser)

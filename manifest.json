@@ -15,7 +15,7 @@
   },
   
   "background": {
-    "scripts": ["parse-1.2.12.min.js", "test.js", "createBlock.js", "signIn.js", "signUp.js"]
+    "scripts": ["parse-1.2.12.min.js","createBlock.js","test.js"]
   },
   
   "browser_action": {
