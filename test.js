@@ -39,13 +39,6 @@ function inputBlockDetails()
 	prompt("Block Name: ");
 }
 
-function createBlockWindow()
-{
-	cbWindow = window.open("http://researchblocks.parseapp.com/createBlock.html");
-	cbWindow.focus();
-}
-
-
 // "Create New Block" menu item
 
 var createBlock = chrome.contextMenus.create({"title": "Create New Block","onclick": createBlockWindow,"contexts":["all"],
@@ -53,33 +46,3 @@ var createBlock = chrome.contextMenus.create({"title": "Create New Block","oncli
 
 // "Add to Block" menu item 
 var fillBlock = chrome.contextMenus.create({"title": "Add to Block", "contexts":["all"], "id": "fillBlock_page"});
-
-
-
-// Adding test blocks
-
-//var testBlock1 = chrome.contextMenus.create(
-  //{"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block1_page"});
- 
-/*var testBlock1_link = chrome.contextMenus.create(
-  {"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick_link, "contexts":["link", "image"], "id": "Block1_link"});
-  
-var testBlock1_selection = chrome.contextMenus.create(
-  {"title": "Data Structures", "parentId": fillBlock, "onclick": testOnClick_selection, "contexts":["selection"], "id": "Block1_selection"});
-*/
-
-
-//var testBlock2 = chrome.contextMenus.create(
-  //{"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick, "contexts":["page", "link", "image", "selection"], "id": "Block2_page"});
-
-/*var testBlock2_link = chrome.contextMenus.create(
-  {"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick_link, "contexts":["link", "image"], "id": "Block2_link"});
-  
-var testBlock2_selection = chrome.contextMenus.create(
-  {"title": "Algorithms", "parentId": fillBlock, "onclick": testOnClick_selection, "contexts":["selection"], "id": "Block2_selection"});
-  */
-//console.log("parent:" + parent + " child1:" + child1 + " child2:" + child2);
-
-
-
-
